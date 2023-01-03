@@ -3,22 +3,45 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+hr {
+    background-color: black;
+    height: 1px;
+}
+
+.base-info {
+    display: block;
+}
+
+.name-pos {
+    display: inline-block;
+}
+
 .name {
+    display: block;
     font-style: italic;
     border-bottom: 2px solid lightskyblue;
 }
 
 .ihor-photo {
+    float: right;
+    width: 100px;
+    height: 100px;
     border: 2px solid lightskyblue;
     padding: 10px;
 }
 
 .position {
+    display: block;
     font-weight: bold;
     border-bottom: 2px solid lightskyblue;
 }
 
+.study-skill-achiv {
+    display: block;
+}
+
 .study-table {
+    width: 100%;
     background-color: lightsteelblue;
 }
 
