@@ -1,57 +1,22 @@
 body {
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+
 }
 
 hr {
     background-color: black;
-    height: 1px;
+    height: 4px;
+    border: 0;
 }
 
-.base-info {
-    display: block;
-}
-
-.name-pos {
-    display: inline-block;
-}
-
-.name {
-    display: block;
-    font-style: italic;
-    border-bottom: 2px solid lightskyblue;
-}
-
-.ihor-photo {
-    float: right;
-    width: 100px;
-    height: 100px;
-    border: 2px solid lightskyblue;
-    padding: 10px;
-}
-
-.position {
-    display: block;
-    font-weight: bold;
-    border-bottom: 2px solid lightskyblue;
-}
-
-.study-skill-achiv {
-    display: block;
-}
-
-.study-table {
-    width: 100%;
-    background-color: lightsteelblue;
-}
-
-.study-table th {
-    background-color: lightskyblue;
-    text-transform: uppercase;
+ul {
+    padding-left: 0px;
 }
 
 a:link {
-    color: #00f;
+    color: darkslateblue;
     text-decoration: underline;
 }
 
@@ -60,14 +25,129 @@ a:visited {
 }
 
 a:hover {
+    color: darkblue;
     text-decoration: none;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.base-info {
+    display: flex;
+    flex-direction: column;
+    background-color: lightsteelblue;
+    width: 300px;
+    border-right: black solid 2px;
+}
+
+.base-info hr {
+    margin-bottom: 30px;
+    margin: 0px 40px 30px 0px;
+}
+
+.name {
+    font-size: 40px;
+    display: block;
+    color: whitesmoke;
+    margin-left: 40px;
+}
+
+.name-span {
+    color: darkslateblue;
+}
+
+.ihor-photo {
+    width: 300px;
+}
+
+.contact {
+    margin: 20px 10px 0 40px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact h3 {
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.languages {
+    margin: 20px 10px 0 40px;
+}
+
+.languages li {
+    list-style-type: none;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.extra-info {
+    display: block;
+    flex-grow: 1;
+    margin-left: 55px;
+}
+
+.extra-info hr {
+    margin: 0 100px 20px 0;
+}
+
+.extra-info h2 {
+    font-size: 36px;
+    margin-bottom: 28px;
+}
+
+.extra-info p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.summary {
+    margin-top: 50px;
 }
 
 .skills {
-    list-style-type: square;
-    border-bottom: 2px solid lightskyblue;
+    margin-top: 50px;
 }
 
-.achiv {
-    border-bottom: 2px solid lightskyblue;
+.skills ul {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.education {
+    margin-top: 50px;
+}
+
+.ed-list {
+    list-style-type: none;
+}
+
+.ed-list p {
+    font-weight: normal;
+    margin: 0;
+}
+
+.ed-list span {
+    font-weight: bold;
+}
+
+.ed-list li {
+    margin-bottom: 20px;
 }
