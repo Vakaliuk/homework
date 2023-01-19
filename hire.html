@@ -5,65 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hire me</title>
+    <link rel="stylesheet" href="./style-hire.css" />
   </head>
   <body>
-    <h1>Hire me</h1>
-    <h3>Contact information</h3>
+    <div class="container">
+      <h1>Hire me</h1>
+      <h4>Contact information</h4>
 
-    <table border="1px" cellpadding="5" cellspacing="0">
-      <tr>
-        <th>Phone</th>
-        <td>+380733070047</td>
-      </tr>
+      <table cellpadding="8" cellspacing="0">
+        <tr>
+          <th class="topline" align="center">Phone</th>
+          <td class="topline">+380733070047</td>
+        </tr>
 
-      <tr>
-        <th>Address</th>
-        <td>Vinnytsia, Ukraine</td>
-      </tr>
-    </table>
+        <tr>
+          <th align="center">Address</th>
+          <td>Vinnytsia, Ukraine</td>
+        </tr>
+      </table>
 
-    <form action="./index.html" method="get">
-      <fieldset style="width: 500px">
-        <legend>Contact form</legend>
+      <form action="./index.html" method="get">
+        <fieldset>
+          <legend>Contact form</legend>
 
-        <table>
-          <label for="e-mail"
-            ><tr>
-              <td>E-mail:</td>
-              <td><input type="text" name="e-mail" required /></td></tr
-          ></label>
+          <label class="email-label" for="email">
+            E-mail: <span class="red-zirochka">*</span>
+          </label>
+          <input
+            id="email"
+            class="email"
+            type="email"
+            name="email"
+            required
+            placeholder="example@gmail.com"
+          />
 
-          <label for="description"
-            ><tr>
-              <td valign="top">Description:</td>
-              <td>
-                <textarea
-                  name="description"
-                  id="description"
-                  cols="40"
-                  rows="5"
-                ></textarea>
-              </td></tr
-          ></label>
+          <p class="error">invalid email</p>
 
-          <label for="work-type"
-            ><tr>
-              <td>Work type:</td>
-              <td>
-                <select name="work-type" id="work-type">
-                  <option value="">Office work</option>
-                  <option value="">Remote work</option>
-                  <option value="">One-off project</option>
-                </select>
-              </td>
-            </tr></label
-          >
-        </table>
+          <label class="desc-label" for="description">
+            Description:
+            <textarea
+              name="description"
+              id="description"
+              cols="40"
+              rows="5"
+              placeholder="Your message"
+            ></textarea>
+          </label>
 
-        <br />
+          <label for="work-type">
+            Work type:
+            <select name="work-type" id="work-type">
+              <option value="">Office work</option>
+              <option value="">Remote work</option>
+              <option value="">One-off project</option>
+            </select>
+          </label>
 
-        <input type="submit" value="Hire me" />
-      </fieldset>
-    </form>
+          <input type="submit" value="Hire me" />
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>

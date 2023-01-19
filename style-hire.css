@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #52575C;
+}
+
+.container {
+    max-width: 1024px;
+    margin-left: auto;
+}
+
+h1 {
+    margin: 25px 0 20px 15px;
+}
+
+h4 {
+    margin-bottom: 5px;
+    font-weight: normal;
+    margin-left: 15px;
+}
+
+table {
+    border: 1px solid #6F7482;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    color: #52575C;
+}
+
+table .topline {
+    border-bottom: 1px solid #6F7482;
+}
+
+td {
+    padding-left: 15px;
+}
+
+th {
+    border-right: 1px solid #6F7482;
+}
+
+fieldset {
+    width: 480px;
+    border: 1px solid #6F7482;
+    border-radius: 16px;
+    padding: 24px 15px;
+    margin-bottom: 50px;
+}
+
+legend {
+    color: #6F7482;
+}
+
+label {
+    display: block;
+    margin-bottom: 25px;
+    color: #52575C;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+input[type='email'],
+select,
+textarea {
+    border: none;
+    border-radius: 4px;
+    background-color: #F8FAFC;
+    height: 48px;
+    width: 460px;
+    outline: none;
+    font-size: 16px;
+    color: #3B4256;
+    padding: 0 12px;
+    margin-top: 0.75rem;
+}
+
+.email-label {
+    margin-bottom: 0;
+}
+
+
+input[type='email']:focus,
+select:focus,
+textarea:focus {
+    outline: 1px solid #0048D9;
+    border-radius: 4px;
+
+}
+
+input[type='email']::placeholder {
+    color: #B8BCCA;
+}
+
+input[type='email']:invalid {
+    outline: 1px solid red;
+    border-radius: 4px;
+}
+
+input[type='email']:valid {
+    outline: 1px solid #0E6245;
+    border-radius: 4px;
+}
+
+input[type='submit'] {
+    width: 100px;
+    height: 48px;
+    background: #0048D9;
+    border-radius: 6px;
+    padding: 4px 16px;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background: #002266;
+}
+
+input[type='submit']:disabled {
+    opacity: 45%;
+}
+
+.desc-label {
+    margin-top: 25px;
+}
+
+textarea {
+    min-height: 139px;
+    padding: 12px;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #B8BCCA;
+}
+
+select {
+    color: #52575C;
+    width: 100%;
+    background: #F8FAFC url('./components/mdi_arrow_drop_down.svg') no-repeat center right;
+    cursor: pointer;
+}
+
+select::after {
+    width: 20px;
+    background: url('./components/mdi_arrow_drop_down.svg') repeat center right;
+}
+
+.error {
+    display: none;
+    color: red;
+}
+
+.email:invalid+.error {
+    display: block;
+}
+
+.red-zirochka {
+    color: red;
+}

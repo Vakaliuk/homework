@@ -2,7 +2,6 @@ body {
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-
 }
 
 hr {
@@ -62,6 +61,11 @@ a:hover {
 
 .ihor-photo {
     width: 300px;
+}
+
+.hire-me {
+    margin: 0 0 20px 40px;
+    font-size: 20px;
 }
 
 .contact {
