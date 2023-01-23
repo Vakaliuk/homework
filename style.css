@@ -31,13 +31,11 @@ a:hover {
 
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: stretch;
+    height: 1400px;
     position: relative;
 }
 
 .base-info {
-    position: fixed;
     display: flex;
     flex-direction: column;
     background-color: lightsteelblue;
@@ -46,6 +44,7 @@ a:hover {
     overflow-y: auto;
     max-height: 100vh;
     overflow-x: hidden;
+    position: fixed;
 }
 
 .base-info hr {
@@ -69,6 +68,7 @@ a:hover {
 }
 
 .hire-me {
+    display: inline;
     margin: 0 0 20px 40px;
     font-size: 20px;
 }
@@ -113,6 +113,7 @@ a:hover {
     margin-left: 55px;
     position: absolute;
     left: 300px;
+    width: calc(100vw - 372px);
 }
 
 .extra-info hr {
@@ -121,12 +122,13 @@ a:hover {
 
 .extra-info h2 {
     font-size: 36px;
-    margin-bottom: 28px;
+    margin: 0 0 30px 0;
 }
 
 .extra-info p {
     font-weight: bold;
     font-size: 16px;
+    margin: 0;
 }
 
 .summary {
@@ -134,7 +136,7 @@ a:hover {
 }
 
 .skills {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .skills ul {
@@ -143,7 +145,7 @@ a:hover {
 }
 
 .education {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .ed-list {
