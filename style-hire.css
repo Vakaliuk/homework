@@ -6,7 +6,12 @@
 
 .container {
     max-width: 1024px;
-    margin-left: auto;
+    position: relative;
+
+}
+
+.top-content {
+    margin-left: 20px;
 }
 
 h1 {
@@ -39,11 +44,14 @@ th {
 }
 
 fieldset {
+    position: fixed;
+    top: calc(50% - 285px);
+    left: calc(50% - 262.5px);
     width: 480px;
+    height: 520px;
     border: 1px solid #6F7482;
     border-radius: 16px;
     padding: 24px 15px;
-    margin-bottom: 50px;
 }
 
 legend {
