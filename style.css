@@ -1,13 +1,38 @@
+.main-theme {
+    /* colors */
+    --color-background: lightsteelblue;
+    --color-main-text: #263036;
+    --color-head-text: #1E1E1E;
+    --color-link-base: darkslateblue;
+    --color-link-visited: #005;
+    --color-link-hover: darkblue;
+    --color-name-first: whitesmoke;
+    --color-name-last: darkslateblue;
+    --color-hr: #000;
+
+    /* margin */
+    --base-info-margin: 40px 0 0 40px;
+    --base-info-margin-secondary: 20px 10px 0 40px;
+    --section-margin-top: 50px;
+    --base-info-hr-margin: 0px 40px 30px 0px;
+    --base-info-li-margin: 25px;
+    --base-info-h-margin: 10px;
+
+    --extra-info-margin: 55px;
+    --extra-info-hr-margin: 0 100px 20px 0;
+    --extra-info-h-mragin: 0 0 30px 0;
+    --extra-info-li-margin: 20px;
+}
+
 body {
-    color: #333;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
 }
 
 hr {
-    background-color: black;
     height: 4px;
     border: 0;
+    background-color: var(--color-hr);
 }
 
 ul {
@@ -15,16 +40,16 @@ ul {
 }
 
 a:link {
-    color: darkslateblue;
+    color: var(--color-link-base);
     text-decoration: underline;
 }
 
 a:visited {
-    color: #005;
+    color: var(--color-link-visited);
 }
 
 a:hover {
-    color: darkblue;
+    color: var(--color-link-hover);
     text-decoration: none;
 
 }
@@ -38,7 +63,7 @@ a:hover {
 .base-info {
     display: flex;
     flex-direction: column;
-    background-color: lightsteelblue;
+    background-color: var(--color-background);
     width: 300px;
     border-right: black solid 2px;
     overflow-y: auto;
@@ -48,19 +73,18 @@ a:hover {
 }
 
 .base-info hr {
-    margin-bottom: 30px;
-    margin: 0px 40px 30px 0px;
+    margin: var(--base-info-hr-margin);
 }
 
 .name {
     font-size: 40px;
     display: block;
-    color: whitesmoke;
-    margin-left: 40px;
+    color: var(--color-name-first);
+    margin: var(--base-info-margin);
 }
 
 .name-span {
-    color: darkslateblue;
+    color: var(--color-name-last);
 }
 
 .ihor-photo {
@@ -69,21 +93,22 @@ a:hover {
 
 .hire-me {
     display: inline;
-    margin: 0 0 20px 40px;
+    margin: 20px 0 20px 40px;
     font-size: 20px;
 }
 
 .contact {
-    margin: 20px 10px 0 40px;
+    color: var(--color-main-text);
+    margin: var(--base-info-margin-secondary);
 }
 
 .contact h2 {
-    margin-bottom: 15px;
+    margin-bottom: var(--base-info-h-margin);
 }
 
 .contact h3 {
     margin: 0px;
-    margin-bottom: 10px;
+    margin-bottom: var(--base-info-h-margin);
     font-size: 20px;
 }
 
@@ -93,16 +118,21 @@ a:hover {
 }
 
 .contact-item {
-    margin-bottom: 25px;
+    margin-bottom: var(--base-info-li-margin);
 }
 
 .languages {
-    margin: 20px 10px 0 40px;
+    color: var(--color-main-text);
+    margin: var(--base-info-margin-secondary);
+}
+
+.languages h2 {
+    margin-bottom: var(--base-info-h-margin);
 }
 
 .languages li {
     list-style-type: none;
-    margin-bottom: 15px;
+    margin-bottom: var(--base-info-li-margin);
     font-weight: bold;
     font-size: 20px;
 }
@@ -110,33 +140,37 @@ a:hover {
 .extra-info {
     display: block;
     flex-grow: 1;
-    margin-left: 55px;
+    margin-left: var(--extra-info-margin);
     position: absolute;
     left: 300px;
     width: calc(100vw - 372px);
+    color: var(--color-main-text);
 }
 
 .extra-info hr {
-    margin: 0 100px 20px 0;
+    margin: var(--extra-info-hr-margin);
+
 }
 
 .extra-info h2 {
     font-size: 36px;
-    margin: 0 0 30px 0;
+    margin: var(--extra-info-h-mragin);
+    color: var(--color-head-text);
 }
 
 .extra-info p {
     font-weight: bold;
     font-size: 16px;
     margin: 0;
+    color: var(--color-main-text);
 }
 
 .summary {
-    margin-top: 50px;
+    margin-top: var(--section-margin-top);
 }
 
 .skills {
-    margin-top: 50px;
+    margin-top: var(--section-margin-top);
 }
 
 .skills ul {
@@ -145,7 +179,7 @@ a:hover {
 }
 
 .education {
-    margin-top: 50px;
+    margin-top: var(--section-margin-top);
 }
 
 .ed-list {
@@ -162,5 +196,5 @@ a:hover {
 }
 
 .ed-list li {
-    margin-bottom: 20px;
+    margin-bottom: var(--extra-info-li-margin);
 }
