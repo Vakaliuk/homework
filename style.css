@@ -275,7 +275,7 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 650px) and (max-width: 1200px) {
+@media screen and (min-width: 650px) and (max-width: 1300px) {
     .base-info {
         width: 250px;
     }
@@ -284,13 +284,6 @@ a:hover {
         width: 250px;
     }
 
-    .ihor-photo:hover {
-        transform: none;
-        box-shadow: none;
-    }
-}
-
-@media screen and (min-width: 1200px) {
     .ihor-photo:hover {
         transform: none;
         box-shadow: none;
