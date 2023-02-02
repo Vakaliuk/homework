@@ -9,17 +9,4 @@
     --color-name-first: #cfdbd5;
     --color-name-last: #333533;
     --color-hr: #000;
-
-    /* margin */
-    --base-info-margin: 40px 0 0 40px;
-    --base-info-margin-secondary: 20px 10px 0 40px;
-    --section-margin-top: 50px;
-    --base-info-hr-margin: 0px 40px 30px 0px;
-    --base-info-li-margin: 25px;
-    --base-info-h-margin: 10px;
-
-    --extra-info-margin: 55px;
-    --extra-info-hr-margin: 0 100px 20px 0;
-    --extra-info-h-mragin: 0 0 30px 0;
-    --extra-info-li-margin: 20px;
 }
