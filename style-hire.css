@@ -43,6 +43,19 @@ th {
     border-right: 1px solid #6F7482;
 }
 
+@keyframes scale {
+    0% {
+        opacity: 0;
+        scale: 200%;
+    }
+
+
+    100% {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
 fieldset {
     position: fixed;
     top: calc(50% - 285px);
@@ -52,6 +65,7 @@ fieldset {
     border: 1px solid #6F7482;
     border-radius: 16px;
     padding: 24px 15px;
+    animation: scale .6s ease;
 }
 
 legend {

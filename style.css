@@ -61,6 +61,18 @@ a:hover {
     height: 1200px;
 }
 
+@keyframes up {
+    0% {
+        margin-top: 90vh;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
 .base-info {
     display: flex;
     flex-direction: column;
@@ -68,6 +80,7 @@ a:hover {
     width: 20vw;
     border-right: black solid 2px;
     box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
+    animation: up 1s ease-out .1s;
 }
 
 .base-info hr {
@@ -87,6 +100,7 @@ a:hover {
 
 .ihor-photo {
     width: 20vw;
+    transition: all .2s;
 }
 
 .ihor-photo:hover {
@@ -146,6 +160,7 @@ a:hover {
     flex-grow: 1;
     margin-left: var(--extra-info-margin);
     color: var(--color-main-text);
+    animation: up 1s ease-out .5s;
 }
 
 .extra-info hr {
@@ -197,6 +212,7 @@ a:hover {
 }
 
 .ed-item.done:hover {
+    transition: all .7s;
     opacity: 100%;
 }
 
