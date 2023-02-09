@@ -1,0 +1,266 @@
+.main-theme {
+  /* colors */
+  --color-background: #86a3b4;
+  --color-main-text: #263036;
+  --color-head-text: #1e1e1e;
+  --color-link-base: #1c2e8c;
+  --color-link-visited: #005;
+  --color-link-hover: rgb(5, 5, 96);
+  --color-name-first: #fff;
+  --color-name-last: #1c2e8c;
+  --color-hr: #000;
+}
+
+.my-theme {
+  /* colors */
+  --color-background: #f5cb5c;
+  --color-main-text: #393b39;
+  --color-head-text: #a6b1ac;
+  --color-link-base: #e8eddf;
+  --color-link-visited: #858d89;
+  --color-link-hover: #cfdbd5;
+  --color-name-first: #cfdbd5;
+  --color-name-last: #333533;
+  --color-hr: #000;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+hr {
+  height: 5px;
+  border: 0;
+  background-color: var(--color-hr);
+}
+
+ul {
+  padding-left: 0px;
+}
+
+a:link {
+  color: var(--color-link-base);
+  text-decoration: underline;
+}
+a:visited {
+  color: var(--color-link-visited);
+}
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  height: 1200px;
+}
+
+@keyframes up {
+  0% {
+    margin-top: 90vh;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.base-info {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  width: 20vw;
+  border-right: black solid 2px;
+  box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
+  animation: up 1s ease-out 0.1s;
+}
+.base-info hr {
+  margin: 0px 40px 30px 0px;
+}
+
+.name {
+  font-size: 40px;
+  display: block;
+  color: var(--color-name-first);
+  margin: 40px 0 0 40px;
+}
+
+.name-span {
+  color: var(--color-name-last);
+}
+
+.ihor-photo {
+  z-index: 1;
+  width: 20vw;
+  transition: all 0.2s;
+}
+.ihor-photo:hover {
+  transform: scale(1.5) translateX(16%);
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+}
+
+.hire-me {
+  display: inline;
+  margin: 20px 0 20px 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.base-section {
+  color: var(--color-main-text);
+  margin: 20px 10px 0 40px;
+}
+
+.contact h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.contact h3 {
+  margin: 0px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.contact .contact-list {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.contact .contact-item {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.languages h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.languages li {
+  list-style-type: none;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.extra-info {
+  display: block;
+  flex-grow: 1;
+  margin-left: 55px;
+  color: var(--color-main-text);
+  animation: up 1s ease-out 0.6s;
+}
+.extra-info hr {
+  margin: 0 100px 20px 0;
+}
+.extra-info h2 {
+  font-size: 34px;
+  margin: 0 0 30px 0;
+  color: var(--color-head-text);
+}
+.extra-info p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--color-main-text);
+}
+
+.extra-section {
+  margin-top: 50px;
+}
+
+.skills ul {
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.ed-list {
+  list-style-type: none;
+}
+.ed-list p {
+  font-weight: normal;
+  margin: 0;
+}
+.ed-list span {
+  font-weight: bold;
+}
+.ed-list li {
+  margin-bottom: 20px;
+}
+.ed-list .ed-item.done {
+  opacity: 70%;
+}
+.ed-list .ed-item.done:hover {
+  transition: all 0.7s;
+  opacity: 100%;
+}
+
+/* @media */
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+  }
+  .base-info {
+    width: 100vw;
+  }
+  .extra-info {
+    margin: 0 30px 20px 40px;
+  }
+  .extra-info hr {
+    margin-right: 0;
+  }
+  .extra-info section {
+    margin-top: 35px;
+  }
+  .ihor-photo {
+    margin: auto;
+    width: 75vw;
+  }
+  .ihor-photo:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 650px) {
+  .name {
+    font-size: 60px;
+  }
+  .hire-me {
+    font-size: 30px;
+  }
+  .contact h2 {
+    font-size: 40px;
+  }
+  .contact h3 {
+    font-size: 30px;
+  }
+  .contact .contact-item {
+    font-size: 22px;
+  }
+  .languages h2 {
+    font-size: 40px;
+  }
+  .languages li {
+    font-size: 30px;
+  }
+  .extra-info h2 {
+    font-size: 40px;
+  }
+  .extra-info p {
+    font-size: 22px;
+  }
+  .skills ul {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 1300px) {
+  .base-info {
+    width: 250px;
+  }
+  .ihor-photo {
+    width: 250px;
+  }
+  .ihor-photo:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}/*# sourceMappingURL=style.css.map */

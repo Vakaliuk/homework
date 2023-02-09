@@ -1,0 +1,204 @@
+@import './var-style-hire';
+
+* {
+  margin: 0;
+  font: {
+    family: Arial, Helvetica, sans-serif;
+    color: $text-color;
+  }
+}
+
+.container {
+  max-width: 1024px;
+  position: relative;
+}
+
+.top-content {
+  margin-left: 20px;
+}
+
+h1 {
+  margin: 25px 0 20px 15px;
+}
+
+h4 {
+  margin-bottom: 5px;
+  font-weight: normal;
+  margin-left: 15px;
+}
+
+table {
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  color: $text-color;
+
+  .topline {
+    border-bottom: 1px solid $border-color;
+  }
+
+  td {
+    padding-left: 15px;
+  }
+
+  th {
+    border-right: 1px solid $border-color;
+  }
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    scale: 200%;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+@mixin scale($duration) {
+  animation: scale $duration ease;
+}
+
+fieldset {
+  position: fixed;
+  top: calc(50% - 285px);
+  left: calc(50% - 262.5px);
+  width: 480px;
+  height: 520px;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  padding: 24px 15px;
+  @include scale(0.6s);
+}
+
+legend {
+  color: $border-color;
+}
+
+label {
+  display: block;
+  margin-bottom: 25px;
+
+  font: {
+    color: $text-color;
+    size: 16px;
+    weight: bold;
+  }
+}
+
+input,
+select,
+textarea {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input[type='email'],
+select,
+textarea {
+  border: none;
+  border-radius: 4px;
+  background-color: $semi-background;
+  height: 48px;
+  width: 460px;
+  outline: none;
+  font: {
+    size: 16px;
+    color: #3b4256;
+  }
+  padding: 0 12px;
+  margin-top: 0.75rem;
+}
+
+.email-label {
+  margin-bottom: 0;
+}
+
+input[type='email']:focus,
+select:focus,
+textarea:focus {
+  outline: 1px solid $focus-color;
+  border-radius: 4px;
+}
+
+input[type='email'] {
+  &::placeholder {
+    color: $placeholder-color;
+  }
+
+  &:invalid {
+    outline: 1px solid $error-color;
+    border-radius: 4px;
+  }
+
+  &:valid {
+    outline: 1px solid $valid-color;
+    border-radius: 4px;
+  }
+}
+
+input[type='submit'] {
+  width: 100px;
+  height: 48px;
+  background: $focus-color;
+  border-radius: 6px;
+  padding: 4px 16px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+
+  &:hover {
+    background: #002266;
+  }
+
+  &:disabled {
+    opacity: 45%;
+  }
+}
+
+.desc-label {
+  margin-top: 25px;
+}
+
+textarea {
+  min-height: 139px;
+  padding: 12px;
+  resize: none;
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+}
+
+select {
+  color: $text-color;
+  width: 100%;
+  background: $semi-background url('./components/mdi_arrow_drop_down.svg')
+    no-repeat center right;
+  cursor: pointer;
+
+  &::after {
+    width: 20px;
+    background: url('./components/mdi_arrow_drop_down.svg') repeat center right;
+  }
+}
+
+.error {
+  display: none;
+  color: $error-color;
+
+  &:invalid + .error {
+    display: block;
+  }
+}
+
+.red-zirochka {
+  color: $error-color;
+}

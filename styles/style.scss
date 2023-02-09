@@ -1,0 +1,306 @@
+@import './themes';
+@import './margin';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+hr {
+  height: 5px;
+  border: 0;
+  background-color: $color-hr;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+a {
+  &:link {
+    color: $color-link-base;
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $color-link-visited;
+  }
+  &:hover {
+    color: $color-link-hover;
+    text-decoration: none;
+  }
+}
+
+.container {
+  display: flex;
+  height: 1200px;
+}
+
+@keyframes up {
+  0% {
+    margin-top: 90vh;
+    opacity: 0;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@mixin toUp($duration, $delay) {
+  animation: up $duration ease-out $delay;
+}
+
+.base-info {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-background;
+  width: 20vw;
+  border-right: black solid 2px;
+  box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
+  @include toUp(1s, 0.1s);
+
+  hr {
+    margin: $base-info-hr-margin;
+  }
+}
+
+.name {
+  font-size: 40px;
+  display: block;
+  color: $color-name-first;
+  margin: $base-info-margin;
+}
+
+.name-span {
+  color: $color-name-last;
+}
+
+.ihor-photo {
+  z-index: 1;
+  width: 20vw;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.5) translateX(16%);
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.hire-me {
+  display: inline;
+  margin: 20px 0 20px 40px;
+  font: {
+    size: 20px;
+    weight: bold;
+  }
+}
+
+.base-section {
+  color: $color-main-text;
+  margin: $base-info-margin-secondary;
+}
+
+.contact {
+  h2 {
+    margin-bottom: $base-info-h-margin;
+    font-size: 30px;
+  }
+
+  h3 {
+    margin: 0px;
+    margin-bottom: $base-info-h-margin;
+    font-size: 20px;
+  }
+
+  .contact-list {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .contact-item {
+    margin-bottom: $base-info-li-margin;
+    font: {
+      size: 16px;
+      weight: bold;
+    }
+  }
+}
+
+.languages {
+  h2 {
+    margin-bottom: $base-info-h-margin;
+    font-size: 30px;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: $base-info-li-margin;
+    font: {
+      size: 20px;
+      weight: bold;
+    }
+  }
+}
+
+.extra-info {
+  display: block;
+  flex-grow: 1;
+  margin-left: $extra-info-margin;
+  color: $color-main-text;
+  @include toUp(1s, 0.6s);
+
+  hr {
+    margin: $extra-info-hr-margin;
+  }
+
+  h2 {
+    font-size: 34px;
+    margin: $extra-info-h-mragin;
+    color: $color-head-text;
+  }
+
+  p {
+    font: {
+      size: 16px;
+      weight: bold;
+    }
+    margin: 0;
+    color: $color-main-text;
+  }
+}
+
+.extra-section {
+  margin-top: $section-margin-top;
+}
+
+.skills {
+  ul {
+    padding-left: 20px;
+    font-weight: bold;
+  }
+}
+
+.ed-list {
+  list-style-type: none;
+
+  p {
+    font-weight: normal;
+    margin: 0;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  li {
+    margin-bottom: $extra-info-li-margin;
+  }
+
+  .ed-item.done {
+    opacity: 70%;
+
+    &:hover {
+      transition: all 0.7s;
+      opacity: 100%;
+    }
+  }
+}
+
+/* @media */
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .base-info {
+    width: 100vw;
+  }
+
+  .extra-info {
+    margin: 0 30px 20px 40px;
+
+    hr {
+      margin-right: 0;
+    }
+
+    section {
+      margin-top: 35px;
+    }
+  }
+
+  .ihor-photo {
+    margin: auto;
+    width: 75vw;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 650px) {
+  .name {
+    font-size: 60px;
+  }
+
+  .hire-me {
+    font-size: 30px;
+  }
+
+  .contact {
+    h2 {
+      font-size: 40px;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+
+    .contact-item {
+      font-size: 22px;
+    }
+  }
+
+  .languages {
+    h2 {
+      font-size: 40px;
+    }
+
+    li {
+      font-size: 30px;
+    }
+  }
+
+  .extra-info {
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+  .skills {
+    ul {
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1300px) {
+  .base-info {
+    width: 250px;
+  }
+
+  .ihor-photo {
+    width: 250px;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
