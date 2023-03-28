@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/style.css" type="text/css" />
     <title>CV</title>
   </head>
   <body class="main-theme">
@@ -18,9 +18,10 @@
         <a href="./hire-me.html" class="hire-me">Hire me</a>
 
         <img
-          class="ihor-photo"
+          id="ihorPhoto"
           src="./components/ihorPhoto.jpg"
           alt="photoIhorVakaliuk"
+          class="ihor-photo-1"
         />
 
         <div class="base-section contact">
@@ -59,8 +60,8 @@
       </div>
 
       <div class="extra-info">
-        <section class="extra-section summary">
-          <h2>Summary</h2>
+        <section class="extra-section summary" id="first-section">
+          <h2 class="section-title">Summary</h2>
           <hr />
           <p>
             Hello, my name is Ihor and now I am learning the frontend part of
@@ -68,8 +69,8 @@
           </p>
         </section>
 
-        <section class="extra-section skills">
-          <h2>Skills Highlights</h2>
+        <section class="extra-section skills" id="second-section">
+          <h2 class="section-title">Skills Highlights</h2>
           <hr />
           <ul>
             <li>Basic HTML</li>
@@ -79,8 +80,8 @@
           </ul>
         </section>
 
-        <section class="extra-section education">
-          <h2>Education</h2>
+        <section class="extra-section education" id="third-section">
+          <h2 class="section-title">Education</h2>
           <hr />
 
           <ul class="ed-list">
@@ -118,5 +119,6 @@
         </section>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
