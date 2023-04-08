@@ -1,3 +1,4 @@
+@import './styles-for-autotests.css';
 .main-theme {
   /* colors */
   --color-background: #86a3b4;

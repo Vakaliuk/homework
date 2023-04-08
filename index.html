@@ -5,9 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="./styles/styles-for-autotests.css"
+      type="text/css"
+    />
     <title>CV</title>
   </head>
   <body class="main-theme">
+    <div class="m-container js-container"></div>
     <div class="container">
       <div class="base-info">
         <h1 class="name">
@@ -119,6 +125,25 @@
         </section>
       </div>
     </div>
+
+    <!-- test engine -->
+    <script src="testengine/jasmine.js"></script>
+    <script src="testengine/jasmine-test-reporter.js"></script>
+    <script src="testengine/TestManager.js"></script>
+
+    <!-- add your code import here -->
+    <script src="./script.js"></script>
+
+    <!-- add your test import here -->
+    <script src="./index.test.js"></script>
+
+    <!-- run our code -->
+    <script>
+      window.onload = function () {
+        window.initiateTest();
+      };
+    </script>
+
     <script src="./script.js"></script>
   </body>
 </html>
