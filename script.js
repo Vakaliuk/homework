@@ -1,19 +1,17 @@
-// =====================================
-// Photo
-// =====================================
-const photoRef = document.getElementById('ihorPhoto');
+let photoRef = document.getElementById('ihorPhoto');
 
-photoRef.addEventListener('click', () => {
+function photoToggleClass() {
   photoRef.classList.toggle('ihor-photo-2');
-});
+}
 
-// =====================================
+photoRef.addEventListener('click', photoToggleClass);
+
 // Scroll
 // =====================================
-const titleRef = document.querySelectorAll('.section-title');
-const letterArr = ['a', 'b', 'c', 'd', 'e'];
+let titleRef = document.querySelectorAll('.section-title');
+let letterArr = ['a', 'b', 'c', 'd', 'e'];
 
-for (i = 0; i < titleRef.length; i++) {
+for (let i = 0; i < titleRef.length; i++) {
   const sectionLetter = document.createElement('span');
   sectionLetter.classList.add('span-section-letter', `span-${i}`);
   sectionLetter.textContent = letterArr[i].toUpperCase();
@@ -25,7 +23,7 @@ for (i = 0; i < titleRef.length; i++) {
   titleRef[i].prepend(sectionLetter);
 }
 
-document.body.addEventListener('keydown', (event) => {
+function keyDownScroll() {
   let lettersArr = [];
   const lettersRefs = document.querySelectorAll('.span-section-letter');
 
@@ -33,7 +31,7 @@ document.body.addEventListener('keydown', (event) => {
     lettersArr.push(element.textContent);
   });
 
-  for (i = 0; i < lettersRefs.length; i++) {
+  for (let i = 0; i < lettersRefs.length; i++) {
     if (event.key.toUpperCase() === lettersArr[i]) {
       lettersRefs[i].scrollIntoView({
         behavior: 'smooth',
@@ -41,4 +39,6 @@ document.body.addEventListener('keydown', (event) => {
       });
     }
   }
-});
+}
+
+document.body.addEventListener('keydown', keyDownScroll);

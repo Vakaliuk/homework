@@ -1,34 +1,9 @@
-// HW28
-// describe('Photo click test', function () {
-//   beforeEach(function () {
-//     // Створення тестового середовища
-//     document.body.innerHTML = '<img id="ihorPhoto" src="ihor.jpg">';
-//   });
+// HW30: tests for HW28
 
-//   it('should add ihor-photo-2 class to ihorPhoto when it is clicked', function () {
-//     // Отримання посилання на фото
-//     var photoRef = document.getElementById('ihorPhoto');
-//     // Симулювання кліку на фото
-//     photoRef.click();
-//     // Перевірка чи встановлений клас ihor-photo-2
-//     expect(photoRef.classList.contains('ihor-photo-2')).toBe(true);
-//   });
+describe('test photo', () => {
+  const desc1 = '<p>Photo click test</p>';
 
-//   it('should remove ihor-photo-2 class from ihorPhoto when it is clicked again', function () {
-//     // Отримання посилання на фото
-//     var photoRef = document.getElementById('ihorPhoto');
-//     // Симулювання двох кліків на фото
-//     photoRef.click();
-//     photoRef.click();
-//     // Перевірка чи видалений клас ihor-photo-2
-//     expect(photoRef.classList.contains('ihor-photo-2')).toBe(false);
-//   });
-// });
-
-describe('test cv', () => {
-  const desc = '<p>Photo click test</p>';
-
-  describe(desc, () => {
+  describe(desc1, () => {
     it('should add class', () => {
       const photoRef = document.getElementById('ihorPhoto');
 
@@ -41,7 +16,7 @@ describe('test cv', () => {
     });
   });
 
-  describe(desc, () => {
+  describe(desc1, () => {
     it('should remove class', () => {
       const photoRef = document.getElementById('ihorPhoto');
 
@@ -49,6 +24,18 @@ describe('test cv', () => {
       photoRef.click();
 
       expect(photoRef.classList.contains('ihor-photo-2')).toBe(false);
+    });
+  });
+});
+
+describe('test scroll', () => {
+  const desc2 = '<p>Check if button was clicked</p>';
+
+  describe(desc2, () => {
+    it('should clicked', () => {
+      spyOn(window, 'keyDownScroll');
+      keyDownScroll();
+      expect(keyDownScroll).toHaveBeenCalled();
     });
   });
 });
