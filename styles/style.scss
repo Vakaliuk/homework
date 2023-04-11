@@ -32,7 +32,7 @@ a {
 
 .container {
   display: flex;
-  height: 1200px;
+  height: 1250px;
 }
 
 @keyframes up {
@@ -138,6 +138,10 @@ a {
   h2 {
     margin-bottom: $base-info-h-margin;
     font-size: 30px;
+  }
+
+  ul {
+    margin: 0;
   }
 
   li {
