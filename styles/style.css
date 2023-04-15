@@ -209,6 +209,31 @@ a:hover {
   opacity: 100%;
 }
 
+.repo {
+  overflow: hidden;
+}
+.repo .repos {
+  list-style: none;
+}
+.repo .repos .repo-item {
+  border: none;
+  outline: none;
+  padding-bottom: 20px;
+  font-weight: bold;
+  transition: all 0.2s;
+  transform: scale(1);
+}
+.repo .repos .repo-item:hover {
+  transition: all 0.3s;
+  transform: translateX(155px) scale(1.2);
+}
+.repo .repos .repo-item .repo-description {
+  margin-top: 5px;
+  font-weight: 100;
+  font-size: 14px;
+  opacity: 70%;
+}
+
 /* @media */
 @media screen and (max-width: 650px) {
   .container {

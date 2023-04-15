@@ -1,3 +1,5 @@
+// Scale photo
+// =====================================
 let photoRef = document.getElementById('ihorPhoto');
 
 function photoToggleClass() {
@@ -42,3 +44,4 @@ function keyDownScroll() {
 }
 
 document.body.addEventListener('keydown', keyDownScroll);
+// =====================================

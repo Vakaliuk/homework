@@ -224,6 +224,35 @@ a {
   }
 }
 
+.repo {
+  overflow: hidden;
+
+  .repos {
+    list-style: none;
+
+    .repo-item {
+      border: none;
+      outline: none;
+      padding-bottom: 20px;
+      font-weight: bold;
+      transition: all 0.2s;
+      transform: scale(1);
+
+      &:hover {
+        transition: all 0.3s;
+        transform: translateX(155px) scale(1.2);
+      }
+
+      .repo-description {
+        margin-top: 5px;
+        font-weight: 100;
+        font-size: 14px;
+        opacity: 70%;
+      }
+    }
+  }
+}
+
 /* @media */
 @media screen and (max-width: 650px) {
   .container {
