@@ -165,6 +165,7 @@ a:hover {
   font-size: 34px;
   margin: 0 0 30px 0;
   color: var(--color-head-text);
+  padding-top: 10px;
 }
 .extra-info p {
   font-size: 16px;
