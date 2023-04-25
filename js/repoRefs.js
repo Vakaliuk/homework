@@ -1,11 +1,3 @@
-const gitToken = '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';
-const user = 'Ihor';
-
-const headers = {
-  Authorization: `Bearer ${gitToken}`,
-  'Content-Type': 'application/json',
-};
-
 class gitAPI {
   constructor(name, token) {
     this.name = name;
@@ -13,7 +5,9 @@ class gitAPI {
   }
 
   async getRepos() {
-    const reposRef = document.querySelector('.repos');
+    const headers = {
+      Authorization: `Bearer ${this.token}`,
+    };
 
     const reposRaw = await fetch(
       'https://api.github.com/users/Vakaliuk/repos',
@@ -25,6 +19,8 @@ class gitAPI {
     const repos = await reposRaw.json();
 
     repos.forEach((item) => {
+      const reposRef = document.querySelector('.repos');
+
       const repo = document.createElement('li');
       repo.innerHTML = `<a href="${item.html_url}"> ${item.full_name} </a>`;
       repo.classList.add('repo-item');
